@@ -92,7 +92,7 @@ geraFilhos <- function(obj) {
     for(filhoDesc in filhosDesc) {
       filho <- TrajetoCidades(desc = filhoDesc, pai = obj)
       filho$h <- heuristica(filho)
-      filho$g <- vizinhos[filho$desc]
+      filho$g <- obj$g + vizinhos[filho$desc]
       filho$f <- filho$h + filho$g
       filho$cidades <- obj$cidades
       filhos <- c(filhos, list(filho))

@@ -50,7 +50,6 @@ heuristica.QuebraCabecas <- function(atual){
     for(y in 1:3) {
       ## Gerando posição objetivo
       obj <- which(posObj == posAtual[x,y], arr.ind = TRUE) 
-      
       ## Cálculo da distância de Manhattan para a posição pos(x,y)
       dist <- dist + abs(x - obj[[1]]) + abs(y - obj[[2]])
     }
